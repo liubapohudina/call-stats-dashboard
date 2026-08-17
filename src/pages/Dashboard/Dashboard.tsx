@@ -69,12 +69,10 @@ export const Dashboard = () => {
         <Footer />
       </Box>
 
-      {stats && (
-        <FloatingChatButton
-          stats={stats}
-          chatUrl="https://wfwokl4.app.n8n.cloud/webhook/d8b44bd4-f5d0-4607-8583-2a148c3296fd/chat"
-        />
-      )}
+      <FloatingChatButton
+        stats={stats}
+        chatUrl="https://kektbw.app.n8n.cloud/webhook/d8b44bd4-f5d0-4607-8583-2a148c3296fd/chat"
+      />
     </Box>
   );
 };

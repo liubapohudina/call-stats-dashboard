@@ -7,7 +7,7 @@ export const getCallStats = async (
   signal?: AbortSignal,
 ): Promise<CallStats> => {
   const response = await axios.get<CallStats>(
-    'https://wfwokl4.app.n8n.cloud/webhook/get-call-stats',
+    'https://kektbw.app.n8n.cloud/webhook/get-call-stats',
     {
       params: { startDate, endDate },
       signal,

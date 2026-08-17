@@ -4,15 +4,17 @@ import type { CallStats } from '../../types/stats.types';
 import styles from './FloatingChatButton.module.scss';
 
 interface FloatingChatButtonProps {
-  stats: CallStats;
+  stats?: CallStats | null;
   chatUrl?: string;
 }
 
 export const FloatingChatButton = ({
   stats,
-  chatUrl = 'https://wfwokl4.app.n8n.cloud/webhook/d8b44bd4-f5d0-4607-8583-2a148c3296fd/chat',
+  chatUrl = '#',
 }: FloatingChatButtonProps) => {
-  const summary = `${stats.totalCalls} дзвінків · ${stats.negativeCallPercent}% негативу · ${stats.positive} позитивних`;
+  const summary = stats
+    ? `${stats.totalCalls} дзвінків · ${stats.negativeCallPercent}% негативу · ${stats.positive} позитивних`
+    : 'Дані ще завантажуються...';
 
   return (
     <Tooltip
