@@ -1,0 +1,116 @@
+.card {
+  border-radius: var(--radius-card);
+  padding: 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.title {
+  color: var(--white) !important;
+  font-family: var(--font-display) !important;
+  letter-spacing: 0.02em;
+}
+
+.liveBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--positive);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pulseDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--positive);
+  box-shadow: 0 0 8px var(--positive);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.bigNumber {
+  font-family: var(--font-display) !important;
+  font-size: 56px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  color: var(--white) !important;
+  background: linear-gradient(180deg, var(--white) 0%, var(--violet-neon) 160%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bigNumberLabel {
+  font-family: var(--font-mono) !important;
+  font-size: 13px !important;
+  color: var(--text-muted) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px !important;
+}
+
+.metricsRow {
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.metricValuePositive {
+  font-family: var(--font-mono) !important;
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  color: var(--positive) !important;
+}
+
+.metricValueNegative {
+  font-family: var(--font-mono) !important;
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  color: var(--negative) !important;
+}
+
+.metricLabel {
+  font-size: 12px !important;
+  color: var(--text-muted) !important;
+  margin-top: 2px !important;
+}
+
+.recommendation {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-raised);
+  border-left: 2px solid var(--violet-neon);
+}
+
+.recommendationLabel {
+  font-family: var(--font-mono) !important;
+  font-size: 11px !important;
+  color: var(--violet-neon) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px !important;
+}
+
+.recommendationText {
+  font-size: 14px !important;
+  color: var(--white) !important;
+  line-height: 1.5 !important;
+}

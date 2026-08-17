@@ -1,0 +1,133 @@
+.section {
+  margin-top: 56px;
+}
+
+.heading {
+  font-size: 24px !important;
+  margin-bottom: 6px !important;
+}
+
+.subheading {
+  font-family: var(--font-mono) !important;
+  font-size: 13px !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 28px !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  position: relative;
+  padding: 28px 24px;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+
+  // "рідке скло": напівпрозорий фон + блюр того, що позаду
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(168, 95, 255, 0.04) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 8px 32px rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  // світловий відблиск зверху - імітація заломлення світла на склі
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    );
+  }
+
+  // м'яка неонова пляма, що проступає з кутка картки
+  &::after {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -30%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, var(--violet-glow), transparent 70%);
+    opacity: 0.6;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(168, 95, 255, 0.4);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.16),
+      0 12px 40px rgba(168, 95, 255, 0.2);
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.cardIndex {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.iconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-bg, rgba(168, 95, 255, 0.12));
+  border: 1px solid var(--border-subtle);
+  margin-bottom: 20px;
+}
+
+.icon {
+  color: var(--violet-neon) !important;
+  font-size: 22px !important;
+}
+
+.cardTitle {
+  font-family: var(--font-display) !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  color: var(--white) !important;
+  margin-bottom: 8px !important;
+}
+
+.cardDescription {
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
+  color: var(--text-muted) !important;
+}

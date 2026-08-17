@@ -1,0 +1,19 @@
+.card {
+  border-radius: var(--radius-card);
+  height: 100%;
+}
+
+.title {
+  color: var(--white) !important;
+  font-family: var(--font-display) !important;
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  font-family: var(--font-mono) !important;
+  font-size: 11px !important;
+  color: var(--text-muted) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px !important;
+}
