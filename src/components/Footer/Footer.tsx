@@ -16,7 +16,11 @@ const links: FooterLink[] = [
     href: 'https://github.com/liubapohudina',
     icon: GitHubIcon,
   },
-  { label: 'Notion', href: 'https://notion.so/your-page', icon: LanguageIcon },
+  {
+    label: 'Notion',
+    href: 'https://disco-manuscript-9e9.notion.site/AI-Automator-n8n-AI-Agents-3bb6f659715780f8b041cfa85ee3f8e3',
+    icon: LanguageIcon,
+  },
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/liubapohudina/',
